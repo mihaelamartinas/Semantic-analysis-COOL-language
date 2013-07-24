@@ -1,0 +1,140 @@
+#1
+_program
+  #1
+  _class
+    A
+    Object
+    "_tests/simple/dispatch.cl"
+    (
+    #2
+    _method
+      method
+      #2
+      _formal
+        a
+        Int
+      #2
+      _formal
+        b
+        Int
+      Int
+      #3
+      _plus
+        #3
+        _object
+          a
+        : Int
+        #3
+        _object
+          b
+        : Int
+      : Int
+    )
+  #7
+  _class
+    B
+    A
+    "_tests/simple/dispatch.cl"
+    (
+    #8
+    _method
+      method
+      #8
+      _formal
+        a
+        Int
+      #8
+      _formal
+        b
+        Int
+      Int
+      #9
+      _mul
+        #9
+        _object
+          a
+        : Int
+        #9
+        _object
+          b
+        : Int
+      : Int
+    )
+  #13
+  _class
+    Main
+    Object
+    "_tests/simple/dispatch.cl"
+    (
+    #14
+    _attr
+      obj
+      B
+      #14
+      _new
+        B
+      : B
+    #16
+    _method
+      main
+      Int
+      #17
+      _block
+        #18
+        _dispatch
+          #18
+          _object
+            obj
+          : B
+          method
+          (
+          #18
+          _int
+            1
+          : Int
+          #18
+          _int
+            2
+          : Int
+          )
+        : Int
+        #19
+        _static_dispatch
+          #19
+          _object
+            obj
+          : B
+          A
+          method
+          (
+          #19
+          _int
+            3
+          : Int
+          #19
+          _int
+            4
+          : Int
+          )
+        : Int
+        #20
+        _static_dispatch
+          #20
+          _object
+            obj
+          : B
+          B
+          method
+          (
+          #20
+          _int
+            5
+          : Int
+          #20
+          _int
+            6
+          : Int
+          )
+        : Int
+      : Int
+    )

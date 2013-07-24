@@ -1,0 +1,83 @@
+Martinas Mihaela-Alexandra
+	342C3
+
+
+					Tema de casă 2 - Analiza semantică
+
+	1. __Surse adaugate__
+	Pentru rezolvarea temei am folosit arhiva pusa pe site la care am adaugat
+urmatoarele doua clase:
+	->AnalyseTypes
+	->NodeInhGraph
+
+	In fisierul AnalyseTypes.java am adaugat metodele necesare pentru atribuirea
+de tipuri si stabilirea scopeurilor. Este dispatcherul folosit pentru analiza
+fiecarei clase.
+	Clasa NodeInhGraph descrie nodul unui graf din graful de mostenire. Fiecare
+nod reprezinta defapt o clasa care are numele clasei, obiectul corespunzator
+clasei si alte informatii necesare pentru determinarea tipurilor.
+	In clasa ClassTable am adaugat metodele pentru verificarea structurii
+programului si pentru a construi arborele de mostenire.
+
+	2. __ Algoritm__
+	Algoritmul folosit pentru rezolvarea temei:
+	
+	In __prima faza__ am analizat structura claselor: redefinirea claselor de baza
+ale limbajului, definirea unei metode main in alta parte decat in clasa Main,
+extinderea unor clase finale precum Int,Bool sau String precum si alte verificari.
+Tot in aceasta etapa la parcurgerea claselor este construit si arborele de mostenire
+pentru a fi disponibil la urmatoarea etapa daca aceasta va mai avea loc.
+Arborele de mostenire are ca nod radacina clasa Object si celelalte clase vor
+fi descendenti ai acesteia. In arborele de mostenire am adaugat si celelalte
+clase de baza ale limbajului pentru a fi vizibile celorlalte clase ale programului.
+
+	Daca programul a trecut de etapa de verificare structurala programul trece
+la __a doua etapa__.
+	Creez o tabela de simboluri si deschid un nou scope (considerat ca fiind un
+scope global). In scope-ul global adaug identificatorii din clasele de baza ale
+limbajului, dar si metodele din celelalte clase definite in program deoarece
+metodele au scope global.
+	Dupa aceste initializari sunt este parcurs arborele de mostenire in adancime,
+si este deschis cate un scope pentru fiecare ramura a grafului astfel incat
+clasele de pe lantul de mostenire sa aiba vizibile atributele claselor parinte.
+	Pentru toate clasele, cu exceptia clasei Main se va face incerca atribuirea
+de tipuri si in acelasi timp verificarea corectitudinii atribuirilor facute.
+	Clasa Main este vazuta ca un caz special deoarece ea trebuie sa aiba viziblitate
+asupra tuturor claselor din program, chiar daca nu se afla in propriul lant de
+mostenire.
+	Pentru atribuirea de tipuri in clase:
+	Fiecare clasa se afla intr-un nou scope, iar, atributele sunt adaugate
+in acel scope.
+	Dupa adaugarea atributelor se trece la atribuirea si analiza propriu-zisa a
+tipurilor.
+	Pentru atribute: se determina tipul expresiei fiecarui atribut folosind
+o metoda dispatcher pentru diferitele tipuri de expresii.
+	Pentru metode: acestea nu mai sunt adaugate in scope fiind deja adaugate
+la inceput, dar este deschis un nou scope la intrarea in metoda pentru a se
+adauga parametri formali ai acestora si pentru a-i face vizibili in interiorul
+metodelor. Pentru analiza expresiilor este folosita aceeasi metoda dispatcher
+care analizeaza expresiile primite in functie de tipul lor.
+	La adaugarea unui identificator in tabela de simboluri am folosit o pereche
+care consta in numele identificatorului de tip AbstractSymbol si un obiect care
+reprezinta expresia asociata identificatorului. Din acest motiv la cautarea
+unui identificator in tabela de simboli trebuie facuta o analiza a tipului
+returnat pentru a putea obtine informatia necesara (cel mai frecvent fiind
+un AbstractSymbol care reprezinta tipul identificatorului).
+	Analiza expresiilor am facut-o conform indicatiilor din manualul limbajului.
+	
+	Pentru expresiile de tip __let__ am deschis un scope la fiecare aparitie pentru
+a asigura vizibilitatea identificatorilor in interiorul letului.
+
+	De asemenea pentru expresiile __case__ am adaugat un nou scope pentru fiecare
+branch deoarece identificatorul poate aparea si in expresie. Pentru a realiza
+joinul tipurilor de pe fiecare branch am creat un vector care continea
+tipurile deja obtinute si am realizat urmatoarele verificari: daca toate valorile
+erau egale, atunci acela devenea tipul caseului, daca nu pentru fiecare tip
+se verifica daca este parinte pentru toate celelalte tipuri din vector si daca
+da aceasta semnifica ca acela va fi tipul case-ului. Daca nici unul din tipuri
+nu era parinte pentru toate clasele, ca tip parinte era ales Object care este
+extins de toate clasele.
+
+	3. __ Mentiuni__
+	Mentionez ca tema trece toate testele. Nu am implementat functionalitatea
+pentru bonus.

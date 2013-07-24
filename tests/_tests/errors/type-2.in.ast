@@ -1,0 +1,48 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/errors/type-2.cl"
+    (
+    #4
+    _attr
+      value
+      Int
+      #4
+      _int
+        0
+      : _no_type
+    #6
+    _method
+      main
+      Object
+      #7
+      _let
+        value
+        String
+        #0
+        _no_expr
+        : _no_type
+        #7
+        _let
+          x
+          Int
+          #0
+          _no_expr
+          : _no_type
+          #7
+          _plus
+            #7
+            _object
+              value
+            : _no_type
+            #7
+            _object
+              x
+            : _no_type
+          : _no_type
+        : _no_type
+      : _no_type
+    )

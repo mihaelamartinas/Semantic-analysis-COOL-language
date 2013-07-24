@@ -1,0 +1,148 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/let.cl"
+    (
+    #4
+    _method
+      main
+      Int
+      #5
+      _let
+        a
+        Int
+        #5
+        _int
+          10
+        : _no_type
+        #5
+        _let
+          b
+          Int
+          #5
+          _int
+            20
+          : _no_type
+          #5
+          _plus
+            #5
+            _plus
+              #5
+              _object
+                a
+              : _no_type
+              #5
+              _mul
+                #5
+                _int
+                  2
+                : _no_type
+                #5
+                _object
+                  b
+                : _no_type
+              : _no_type
+            : _no_type
+            #5
+            _let
+              a
+              Int
+              #5
+              _int
+                50
+              : _no_type
+              #5
+              _let
+                c
+                Int
+                #5
+                _int
+                  30
+                : _no_type
+                #6
+                _sub
+                  #6
+                  _plus
+                    #6
+                    _plus
+                      #6
+                      _object
+                        a
+                      : _no_type
+                      #6
+                      _object
+                        b
+                      : _no_type
+                    : _no_type
+                    #6
+                    _object
+                      c
+                    : _no_type
+                  : _no_type
+                  #6
+                  _mul
+                    #6
+                    _int
+                      3
+                    : _no_type
+                    #6
+                    _let
+                      x
+                      Int
+                      #6
+                      _int
+                        20
+                      : _no_type
+                      #6
+                      _mul
+                        #6
+                        _mul
+                          #6
+                          _object
+                            b
+                          : _no_type
+                          #6
+                          _mul
+                            #6
+                            _object
+                              x
+                            : _no_type
+                            #6
+                            _let
+                              b
+                              Int
+                              #6
+                              _int
+                                100
+                              : _no_type
+                              #6
+                              _mul
+                                #6
+                                _object
+                                  a
+                                : _no_type
+                                #6
+                                _object
+                                  b
+                                : _no_type
+                              : _no_type
+                            : _no_type
+                          : _no_type
+                        : _no_type
+                        #6
+                        _object
+                          c
+                        : _no_type
+                      : _no_type
+                    : _no_type
+                  : _no_type
+                : _no_type
+              : _no_type
+            : _no_type
+          : _no_type
+        : _no_type
+      : _no_type
+    )

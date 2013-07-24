@@ -1,0 +1,132 @@
+#1
+_program
+  #3
+  _class
+    Main
+    IO
+    "_tests/advanced/io.cl"
+    (
+    #4
+    _attr
+      name
+      String
+      #0
+      _no_expr
+      : _no_type
+    #5
+    _attr
+      age
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #7
+    _method
+      main
+      Object
+      #8
+      _block
+        #9
+        _assign
+          name
+          #9
+          _dispatch
+            #9
+            _dispatch
+              #9
+              _object
+                self
+              : SELF_TYPE
+              out_string
+              (
+              #9
+              _string
+                "Please enter your name: "
+              : _no_type
+              )
+            : _no_type
+            in_string
+            (
+            )
+          : _no_type
+        : _no_type
+        #10
+        _assign
+          age
+          #10
+          _dispatch
+            #10
+            _dispatch
+              #10
+              _object
+                self
+              : SELF_TYPE
+              out_string
+              (
+              #10
+              _string
+                "Please enter your age: "
+              : _no_type
+              )
+            : _no_type
+            in_int
+            (
+            )
+          : _no_type
+        : _no_type
+        #13
+        _dispatch
+          #13
+          _dispatch
+            #12
+            _dispatch
+              #12
+              _dispatch
+                #12
+                _dispatch
+                  #12
+                  _object
+                    self
+                  : SELF_TYPE
+                  out_string
+                  (
+                  #12
+                  _string
+                    "Your name is "
+                  : _no_type
+                  )
+                : _no_type
+                out_string
+                (
+                #12
+                _object
+                  name
+                : _no_type
+                )
+              : _no_type
+              out_string
+              (
+              #13
+              _string
+                " and you are "
+              : _no_type
+              )
+            : _no_type
+            out_int
+            (
+            #13
+            _object
+              age
+            : _no_type
+            )
+          : _no_type
+          out_string
+          (
+          #13
+          _string
+            " years old."
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )

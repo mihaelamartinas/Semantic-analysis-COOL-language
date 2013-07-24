@@ -1,0 +1,70 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/void-2.cl"
+    (
+    #4
+    _attr
+      i
+      Int
+      #4
+      _int
+        10
+      : Int
+    #5
+    _method
+      main
+      Object
+      #6
+      _let
+        a
+        Object
+        #6
+        _loop
+          #6
+          _leq
+            #6
+            _int
+              0
+            : Int
+            #6
+            _object
+              i
+            : Int
+          : Bool
+          #7
+          _assign
+            i
+            #7
+            _sub
+              #7
+              _object
+                i
+              : Int
+              #7
+              _int
+                1
+              : Int
+            : Int
+          : Int
+        : Object
+        #10
+        _typcase
+          #10
+          _object
+            a
+          : Object
+          #11
+          _branch
+            x
+            Object
+            #11
+            _object
+              self
+            : SELF_TYPE
+        : SELF_TYPE
+      : SELF_TYPE
+    )

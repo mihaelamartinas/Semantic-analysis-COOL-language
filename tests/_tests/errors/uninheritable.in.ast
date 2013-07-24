@@ -1,0 +1,59 @@
+#1
+_program
+  #3
+  _class
+    MyInt
+    Int
+    "_tests/errors/uninheritable.cl"
+    (
+    )
+  #7
+  _class
+    MyString
+    String
+    "_tests/errors/uninheritable.cl"
+    (
+    )
+  #11
+  _class
+    Main
+    Object
+    "_tests/errors/uninheritable.cl"
+    (
+    #12
+    _method
+      main
+      Int
+      #13
+      _let
+        a
+        MyInt
+        #13
+        _new
+          MyInt
+        : _no_type
+        #14
+        _typcase
+          #14
+          _object
+            a
+          : _no_type
+          #15
+          _branch
+            x
+            MyInt
+            #15
+            _int
+              1
+            : _no_type
+          #16
+          _branch
+            x
+            Object
+            #16
+            _int
+              0
+            : _no_type
+        : _no_type
+      : _no_type
+    )

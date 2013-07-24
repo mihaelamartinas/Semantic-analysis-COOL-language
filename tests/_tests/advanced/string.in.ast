@@ -1,0 +1,239 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/string.cl"
+    (
+    #4
+    _method
+      paranthese
+      #4
+      _formal
+        a
+        String
+      #4
+      _formal
+        b
+        String
+      #4
+      _formal
+        c
+        String
+      String
+      #5
+      _dispatch
+        #5
+        _dispatch
+          #5
+          _dispatch
+            #5
+            _dispatch
+              #5
+              _object
+                a
+              : _no_type
+              concat
+              (
+              #5
+              _string
+                "("
+              : _no_type
+              )
+            : _no_type
+            concat
+            (
+            #5
+            _object
+              b
+            : _no_type
+            )
+          : _no_type
+          concat
+          (
+          #5
+          _string
+            ")"
+          : _no_type
+          )
+        : _no_type
+        concat
+        (
+        #5
+        _object
+          c
+        : _no_type
+        )
+      : _no_type
+    #8
+    _method
+      main
+      String
+      #9
+      _let
+        result
+        String
+        #10
+        _dispatch
+          #10
+          _object
+            self
+          : SELF_TYPE
+          paranthese
+          (
+          #11
+          _dispatch
+            #11
+            _object
+              self
+            : SELF_TYPE
+            paranthese
+            (
+            #11
+            _string
+              "a"
+            : _no_type
+            #11
+            _string
+              ""
+            : _no_type
+            #11
+            _string
+              "c"
+            : _no_type
+            )
+          : _no_type
+          #12
+          _dispatch
+            #12
+            _object
+              self
+            : SELF_TYPE
+            paranthese
+            (
+            #13
+            _dispatch
+              #13
+              _object
+                self
+              : SELF_TYPE
+              paranthese
+              (
+              #13
+              _string
+                "d"
+              : _no_type
+              #13
+              _string
+                "e"
+              : _no_type
+              #13
+              _string
+                "f"
+              : _no_type
+              )
+            : _no_type
+            #14
+            _dispatch
+              #14
+              _object
+                self
+              : SELF_TYPE
+              paranthese
+              (
+              #14
+              _string
+                "g"
+              : _no_type
+              #14
+              _string
+                ""
+              : _no_type
+              #14
+              _string
+                "i"
+              : _no_type
+              )
+            : _no_type
+            #15
+            _dispatch
+              #15
+              _object
+                self
+              : SELF_TYPE
+              paranthese
+              (
+              #15
+              _string
+                "j"
+              : _no_type
+              #15
+              _string
+                "k"
+              : _no_type
+              #15
+              _string
+                "l"
+              : _no_type
+              )
+            : _no_type
+            )
+          : _no_type
+          #17
+          _dispatch
+            #17
+            _object
+              self
+            : SELF_TYPE
+            paranthese
+            (
+            #17
+            _string
+              "m"
+            : _no_type
+            #17
+            _string
+              "n"
+            : _no_type
+            #17
+            _string
+              "o"
+            : _no_type
+            )
+          : _no_type
+          )
+        : _no_type
+        #20
+        _dispatch
+          #20
+          _object
+            result
+          : _no_type
+          substr
+          (
+          #20
+          _int
+            0
+          : _no_type
+          #20
+          _divide
+            #20
+            _dispatch
+              #20
+              _object
+                result
+              : _no_type
+              length
+              (
+              )
+            : _no_type
+            #20
+            _int
+              2
+            : _no_type
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )

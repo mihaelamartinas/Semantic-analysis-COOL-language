@@ -1,0 +1,62 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/void-1.cl"
+    (
+    #4
+    _attr
+      max_i
+      Int
+      #4
+      _int
+        1000
+      : Int
+    #6
+    _method
+      main
+      Bool
+      #7
+      _isvoid
+        #7
+        _let
+          i
+          Int
+          #7
+          _int
+            0
+          : Int
+          #8
+          _loop
+            #8
+            _lt
+              #8
+              _object
+                i
+              : Int
+              #8
+              _int
+                0
+              : Int
+            : Bool
+            #9
+            _assign
+              i
+              #9
+              _plus
+                #9
+                _object
+                  i
+                : Int
+                #9
+                _int
+                  1
+                : Int
+              : Int
+            : Int
+          : Object
+        : Object
+      : Bool
+    )

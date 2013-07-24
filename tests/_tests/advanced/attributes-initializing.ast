@@ -1,0 +1,70 @@
+#1
+_program
+  #1
+  _class
+    X
+    Object
+    "_tests/advanced/attributes-initializing.cl"
+    (
+    #2
+    _method
+      f
+      Bool
+      #3
+      _bool
+        1
+      : Bool
+    )
+  #7
+  _class
+    Main
+    IO
+    "_tests/advanced/attributes-initializing.cl"
+    (
+    #8
+    _attr
+      i
+      Int
+      #8
+      _let
+        i
+        Int
+        #0
+        _no_expr
+        : _no_type
+        #8
+        _int
+          5
+        : Int
+      : Int
+    #9
+    _attr
+      b
+      Bool
+      #9
+      _dispatch
+        #9
+        _object
+          x
+        : X
+        f
+        (
+        )
+      : Bool
+    #10
+    _attr
+      x
+      X
+      #10
+      _new
+        X
+      : X
+    #12
+    _method
+      main
+      Object
+      #13
+      _int
+        0
+      : Int
+    )

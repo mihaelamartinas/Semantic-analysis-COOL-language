@@ -1,0 +1,69 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/simple/let.cl"
+    (
+    #4
+    _method
+      main
+      Int
+      #5
+      _let
+        a
+        Int
+        #5
+        _int
+          10
+        : Int
+        #5
+        _let
+          b
+          Int
+          #5
+          _int
+            20
+          : Int
+          #5
+          _block
+            #6
+            _let
+              c
+              Int
+              #6
+              _int
+                30
+              : Int
+              #6
+              _assign
+                a
+                #6
+                _plus
+                  #6
+                  _object
+                    a
+                  : Int
+                  #6
+                  _object
+                    c
+                  : Int
+                : Int
+              : Int
+            : Int
+            #7
+            _plus
+              #7
+              _object
+                a
+              : Int
+              #7
+              _object
+                b
+              : Int
+            : Int
+          : Int
+        : Int
+      : Int
+    )

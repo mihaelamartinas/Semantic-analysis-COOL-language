@@ -1,0 +1,88 @@
+#1
+_program
+  #3
+  _class
+    A
+    IO
+    "_tests/advanced/self-type.cl"
+    (
+    #4
+    _method
+      greet
+      SELF_TYPE
+      #5
+      _dispatch
+        #5
+        _object
+          self
+        : SELF_TYPE
+        out_string
+        (
+        #5
+        _string
+          "Hello from class A!"
+        : String
+        )
+      : SELF_TYPE
+    )
+  #9
+  _class
+    B
+    A
+    "_tests/advanced/self-type.cl"
+    (
+    #10
+    _method
+      goodbye
+      SELF_TYPE
+      #11
+      _dispatch
+        #11
+        _object
+          self
+        : SELF_TYPE
+        out_string
+        (
+        #11
+        _string
+          "Buhbyeee says B, then!"
+        : String
+        )
+      : SELF_TYPE
+    )
+  #15
+  _class
+    Main
+    Object
+    "_tests/advanced/self-type.cl"
+    (
+    #16
+    _method
+      main
+      Object
+      #17
+      _let
+        speaker
+        B
+        #17
+        _new
+          B
+        : B
+        #17
+        _dispatch
+          #17
+          _dispatch
+            #17
+            _object
+              speaker
+            : B
+            greet
+            (
+            )
+          : B
+          goodbye
+          (
+          )
+        : B
+      : B
+    )

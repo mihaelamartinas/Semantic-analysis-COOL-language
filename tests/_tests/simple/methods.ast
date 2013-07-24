@@ -1,0 +1,158 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/simple/methods.cl"
+    (
+    #4
+    _method
+      sum
+      #4
+      _formal
+        a
+        Int
+      #4
+      _formal
+        b
+        Int
+      Int
+      #5
+      _plus
+        #5
+        _object
+          a
+        : Int
+        #5
+        _object
+          b
+        : Int
+      : Int
+    #8
+    _method
+      first
+      #8
+      _formal
+        x
+        String
+      #8
+      _formal
+        y
+        String
+      #8
+      _formal
+        z
+        String
+      String
+      #9
+      _block
+        #9
+        _object
+          z
+        : String
+        #9
+        _object
+          y
+        : String
+        #9
+        _object
+          x
+        : String
+      : String
+    #12
+    _method
+      recurse
+      #12
+      _formal
+        x
+        Int
+      #12
+      _formal
+        y
+        String
+      #12
+      _formal
+        z
+        Bool
+      Bool
+      #13
+      _dispatch
+        #13
+        _object
+          self
+        : SELF_TYPE
+        recurse
+        (
+        #13
+        _plus
+          #13
+          _object
+            x
+          : Int
+          #13
+          _int
+            1
+          : Int
+        : Int
+        #13
+        _object
+          y
+        : String
+        #13
+        _comp
+          #13
+          _object
+            z
+          : Bool
+        : Bool
+        )
+      : Bool
+    #16
+    _method
+      main
+      Int
+      #17
+      _block
+        #17
+        _dispatch
+          #17
+          _object
+            self
+          : SELF_TYPE
+          first
+          (
+          #17
+          _string
+            "a"
+          : String
+          #17
+          _string
+            "b"
+          : String
+          #17
+          _string
+            "c"
+          : String
+          )
+        : String
+        #17
+        _dispatch
+          #17
+          _object
+            self
+          : SELF_TYPE
+          sum
+          (
+          #17
+          _int
+            10
+          : Int
+          #17
+          _int
+            100
+          : Int
+          )
+        : Int
+      : Int
+    )

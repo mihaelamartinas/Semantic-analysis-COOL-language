@@ -1,0 +1,60 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/object.cl"
+    (
+    #4
+    _method
+      main
+      String
+      #5
+      _cond
+        #5
+        _eq
+          #5
+          _dispatch
+            #5
+            _object
+              self
+            : SELF_TYPE
+            type_name
+            (
+            )
+          : String
+          #5
+          _string
+            "Main"
+          : String
+        : Bool
+        #6
+        _dispatch
+          #6
+          _string
+            "Original"
+          : String
+          copy
+          (
+          )
+        : String
+        #8
+        _block
+          #9
+          _dispatch
+            #9
+            _object
+              self
+            : SELF_TYPE
+            abort
+            (
+            )
+          : Object
+          #10
+          _string
+            "Unreachable"
+          : String
+        : String
+      : String
+    )

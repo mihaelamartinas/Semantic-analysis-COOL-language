@@ -1,0 +1,90 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/errors/overload.cl"
+    (
+    #4
+    _method
+      mymethod
+      #4
+      _formal
+        a
+        Int
+      Int
+      #5
+      _mul
+        #5
+        _object
+          a
+        : _no_type
+        #5
+        _int
+          2
+        : _no_type
+      : _no_type
+    #8
+    _method
+      mymethod
+      #8
+      _formal
+        a
+        Int
+      #8
+      _formal
+        b
+        Int
+      Int
+      #9
+      _mul
+        #9
+        _object
+          a
+        : _no_type
+        #9
+        _object
+          b
+        : _no_type
+      : _no_type
+    #12
+    _method
+      main
+      Int
+      #13
+      _plus
+        #13
+        _dispatch
+          #13
+          _object
+            self
+          : SELF_TYPE
+          mymethod
+          (
+          #13
+          _int
+            10
+          : _no_type
+          )
+        : _no_type
+        #13
+        _dispatch
+          #13
+          _object
+            self
+          : SELF_TYPE
+          mymethod
+          (
+          #13
+          _int
+            20
+          : _no_type
+          #13
+          _int
+            30
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )

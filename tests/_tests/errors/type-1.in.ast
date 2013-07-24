@@ -1,0 +1,84 @@
+#1
+_program
+  #3
+  _class
+    A
+    Object
+    "_tests/errors/type-1.cl"
+    (
+    )
+  #4
+  _class
+    B
+    A
+    "_tests/errors/type-1.cl"
+    (
+    )
+  #6
+  _class
+    Main
+    Object
+    "_tests/errors/type-1.cl"
+    (
+    #7
+    _method
+      mymethod
+      #7
+      _formal
+        p
+        A
+      A
+      #8
+      _object
+        p
+      : _no_type
+    #11
+    _method
+      myothermethod
+      #11
+      _formal
+        p
+        B
+      A
+      #12
+      _object
+        p
+      : _no_type
+    #15
+    _method
+      main
+      A
+      #16
+      _let
+        var
+        A
+        #16
+        _new
+          B
+        : _no_type
+        #17
+        _dispatch
+          #17
+          _object
+            self
+          : SELF_TYPE
+          myothermethod
+          (
+          #17
+          _dispatch
+            #17
+            _object
+              self
+            : SELF_TYPE
+            mymethod
+            (
+            #17
+            _object
+              var
+            : _no_type
+            )
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )

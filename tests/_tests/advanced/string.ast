@@ -1,0 +1,239 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/string.cl"
+    (
+    #4
+    _method
+      paranthese
+      #4
+      _formal
+        a
+        String
+      #4
+      _formal
+        b
+        String
+      #4
+      _formal
+        c
+        String
+      String
+      #5
+      _dispatch
+        #5
+        _dispatch
+          #5
+          _dispatch
+            #5
+            _dispatch
+              #5
+              _object
+                a
+              : String
+              concat
+              (
+              #5
+              _string
+                "("
+              : String
+              )
+            : String
+            concat
+            (
+            #5
+            _object
+              b
+            : String
+            )
+          : String
+          concat
+          (
+          #5
+          _string
+            ")"
+          : String
+          )
+        : String
+        concat
+        (
+        #5
+        _object
+          c
+        : String
+        )
+      : String
+    #8
+    _method
+      main
+      String
+      #9
+      _let
+        result
+        String
+        #10
+        _dispatch
+          #10
+          _object
+            self
+          : SELF_TYPE
+          paranthese
+          (
+          #11
+          _dispatch
+            #11
+            _object
+              self
+            : SELF_TYPE
+            paranthese
+            (
+            #11
+            _string
+              "a"
+            : String
+            #11
+            _string
+              ""
+            : String
+            #11
+            _string
+              "c"
+            : String
+            )
+          : String
+          #12
+          _dispatch
+            #12
+            _object
+              self
+            : SELF_TYPE
+            paranthese
+            (
+            #13
+            _dispatch
+              #13
+              _object
+                self
+              : SELF_TYPE
+              paranthese
+              (
+              #13
+              _string
+                "d"
+              : String
+              #13
+              _string
+                "e"
+              : String
+              #13
+              _string
+                "f"
+              : String
+              )
+            : String
+            #14
+            _dispatch
+              #14
+              _object
+                self
+              : SELF_TYPE
+              paranthese
+              (
+              #14
+              _string
+                "g"
+              : String
+              #14
+              _string
+                ""
+              : String
+              #14
+              _string
+                "i"
+              : String
+              )
+            : String
+            #15
+            _dispatch
+              #15
+              _object
+                self
+              : SELF_TYPE
+              paranthese
+              (
+              #15
+              _string
+                "j"
+              : String
+              #15
+              _string
+                "k"
+              : String
+              #15
+              _string
+                "l"
+              : String
+              )
+            : String
+            )
+          : String
+          #17
+          _dispatch
+            #17
+            _object
+              self
+            : SELF_TYPE
+            paranthese
+            (
+            #17
+            _string
+              "m"
+            : String
+            #17
+            _string
+              "n"
+            : String
+            #17
+            _string
+              "o"
+            : String
+            )
+          : String
+          )
+        : String
+        #20
+        _dispatch
+          #20
+          _object
+            result
+          : String
+          substr
+          (
+          #20
+          _int
+            0
+          : Int
+          #20
+          _divide
+            #20
+            _dispatch
+              #20
+              _object
+                result
+              : String
+              length
+              (
+              )
+            : Int
+            #20
+            _int
+              2
+            : Int
+          : Int
+          )
+        : String
+      : String
+    )

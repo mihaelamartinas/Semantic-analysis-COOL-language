@@ -1,0 +1,64 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/advanced/strlit.cl"
+    (
+    #4
+    _attr
+      a
+      String
+      #4
+      _string
+        "This is a string literal"
+      : _no_type
+    #6
+    _attr
+      b
+      String
+      #10
+      _string
+        "This\n\tis\n\tanother\n\tstring literal\n\t"
+      : _no_type
+    #12
+    _attr
+      c
+      String
+      #14
+      _string
+        "This is\n\t(* a literal *)\n\ttoo"
+      : _no_type
+    #16
+    _attr
+      d
+      String
+      #17
+      _string
+        "a\bcde\fghijklm\nopqrs\tuvwxyz\"\n\t'{};"
+      : _no_type
+    #19
+    _method
+      main
+      String
+      #20
+      _block
+        #20
+        _object
+          a
+        : _no_type
+        #20
+        _object
+          b
+        : _no_type
+        #20
+        _object
+          c
+        : _no_type
+        #20
+        _object
+          d
+        : _no_type
+      : _no_type
+    )

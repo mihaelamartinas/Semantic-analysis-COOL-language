@@ -1,0 +1,47 @@
+#1
+_program
+  #3
+  _class
+    Main
+    Object
+    "_tests/simple/attributes.cl"
+    (
+    #4
+    _attr
+      number
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #5
+    _attr
+      initialized
+      Int
+      #5
+      _int
+        1234
+      : Int
+    #6
+    _attr
+      a_String
+      String
+      #6
+      _string
+        "This is a string"
+      : String
+    #8
+    _method
+      main
+      Int
+      #9
+      _plus
+        #9
+        _object
+          number
+        : Int
+        #9
+        _object
+          initialized
+        : Int
+      : Int
+    )

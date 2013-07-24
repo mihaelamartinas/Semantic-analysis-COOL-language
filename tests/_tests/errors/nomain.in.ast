@@ -1,0 +1,27 @@
+#1
+_program
+  #3
+  _class
+    A
+    IO
+    "_tests/errors/nomain.cl"
+    (
+    #4
+    _method
+      main
+      Object
+      #5
+      _dispatch
+        #5
+        _object
+          self
+        : SELF_TYPE
+        out_string
+        (
+        #5
+        _string
+          "Hello!"
+        : _no_type
+        )
+      : _no_type
+    )

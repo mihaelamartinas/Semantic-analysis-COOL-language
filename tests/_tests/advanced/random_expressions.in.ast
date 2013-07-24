@@ -1,0 +1,168 @@
+#1
+_program
+  #3
+  _class
+    Main
+    IO
+    "_tests/advanced/random_expressions.cl"
+    (
+    #4
+    _method
+      main
+      Object
+      #5
+      _cond
+        #5
+        _lt
+          #5
+          _mul
+            #5
+            _divide
+              #5
+              _dispatch
+                #5
+                _dispatch
+                  #5
+                  _dispatch
+                    #5
+                    _let
+                      i
+                      Int
+                      #5
+                      _int
+                        4
+                      : _no_type
+                      #5
+                      _let
+                        j
+                        IO
+                        #0
+                        _no_expr
+                        : _no_type
+                        #5
+                        _plus
+                          #5
+                          _block
+                            #5
+                            _cond
+                              #5
+                              _isvoid
+                                #5
+                                _object
+                                  j
+                                : _no_type
+                              : _no_type
+                              #5
+                              _int
+                                2
+                              : _no_type
+                              #5
+                              _int
+                                3
+                              : _no_type
+                            : _no_type
+                          : _no_type
+                          #5
+                          _int
+                            4
+                          : _no_type
+                        : _no_type
+                      : _no_type
+                    : _no_type
+                    type_name
+                    (
+                    )
+                  : _no_type
+                  concat
+                  (
+                  #5
+                  _block
+                    #5
+                    _dispatch
+                      #5
+                      _object
+                        self
+                      : SELF_TYPE
+                      out_string
+                      (
+                      #5
+                      _string
+                        "OK"
+                      : _no_type
+                      )
+                    : _no_type
+                    #5
+                    _string
+                      "O"
+                    : _no_type
+                  : _no_type
+                  )
+                : _no_type
+                length
+                (
+                )
+              : _no_type
+              #5
+              _int
+                2
+              : _no_type
+            : _no_type
+            #5
+            _typcase
+              #5
+              _object
+                self
+              : _no_type
+              #5
+              _branch
+                x
+                IO
+                #5
+                _int
+                  4
+                : _no_type
+              #5
+              _branch
+                x
+                Object
+                #5
+                _int
+                  5
+                : _no_type
+            : _no_type
+          : _no_type
+          #5
+          _int
+            4
+          : _no_type
+        : _no_type
+        #5
+        _dispatch
+          #5
+          _object
+            self
+          : SELF_TYPE
+          out_string
+          (
+          #5
+          _string
+            ""
+          : _no_type
+          )
+        : _no_type
+        #5
+        _dispatch
+          #5
+          _object
+            self
+          : SELF_TYPE
+          out_string
+          (
+          #5
+          _string
+            ""
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )

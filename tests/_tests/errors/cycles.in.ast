@@ -1,0 +1,66 @@
+#1
+_program
+  #4
+  _class
+    B
+    C
+    "_tests/errors/cycles.cl"
+    (
+    )
+  #8
+  _class
+    C
+    D
+    "_tests/errors/cycles.cl"
+    (
+    )
+  #12
+  _class
+    E
+    C
+    "_tests/errors/cycles.cl"
+    (
+    )
+  #16
+  _class
+    A
+    B
+    "_tests/errors/cycles.cl"
+    (
+    #17
+    _method
+      method
+      Int
+      #18
+      _int
+        0
+      : _no_type
+    )
+  #22
+  _class
+    D
+    A
+    "_tests/errors/cycles.cl"
+    (
+    )
+  #26
+  _class
+    Main
+    E
+    "_tests/errors/cycles.cl"
+    (
+    #27
+    _method
+      main
+      Int
+      #28
+      _dispatch
+        #28
+        _object
+          self
+        : SELF_TYPE
+        method
+        (
+        )
+      : _no_type
+    )

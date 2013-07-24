@@ -1,0 +1,615 @@
+#1
+_program
+  #3
+  _class
+    Matrix
+    Object
+    "_tests/advanced/expressions.cl"
+    (
+    #4
+    _attr
+      a
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #4
+    _attr
+      b
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #4
+    _attr
+      c
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #5
+    _attr
+      d
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #5
+    _attr
+      e
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #5
+    _attr
+      f
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #6
+    _attr
+      g
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #6
+    _attr
+      h
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #6
+    _attr
+      i
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #8
+    _method
+      init
+      #8
+      _formal
+        va
+        Int
+      #8
+      _formal
+        vb
+        Int
+      #8
+      _formal
+        vc
+        Int
+      #8
+      _formal
+        vd
+        Int
+      #8
+      _formal
+        ve
+        Int
+      #8
+      _formal
+        vf
+        Int
+      #8
+      _formal
+        vg
+        Int
+      #9
+      _formal
+        vh
+        Int
+      #9
+      _formal
+        vi
+        Int
+      Matrix
+      #10
+      _block
+        #11
+        _assign
+          a
+          #11
+          _object
+            va
+          : Int
+        : Int
+        #11
+        _assign
+          b
+          #11
+          _object
+            vb
+          : Int
+        : Int
+        #11
+        _assign
+          c
+          #11
+          _object
+            vc
+          : Int
+        : Int
+        #12
+        _assign
+          d
+          #12
+          _object
+            vd
+          : Int
+        : Int
+        #12
+        _assign
+          e
+          #12
+          _object
+            ve
+          : Int
+        : Int
+        #12
+        _assign
+          f
+          #12
+          _object
+            vf
+          : Int
+        : Int
+        #13
+        _assign
+          g
+          #13
+          _object
+            vg
+          : Int
+        : Int
+        #13
+        _assign
+          h
+          #13
+          _object
+            vh
+          : Int
+        : Int
+        #13
+        _assign
+          i
+          #13
+          _object
+            vi
+          : Int
+        : Int
+        #14
+        _object
+          self
+        : SELF_TYPE
+      : SELF_TYPE
+    #18
+    _method
+      det
+      Int
+      #19
+      _sub
+        #19
+        _plus
+          #19
+          _plus
+            #19
+            _mul
+              #19
+              _mul
+                #19
+                _object
+                  a
+                : Int
+                #19
+                _object
+                  e
+                : Int
+              : Int
+              #19
+              _object
+                i
+              : Int
+            : Int
+            #19
+            _mul
+              #19
+              _mul
+                #19
+                _object
+                  b
+                : Int
+                #19
+                _object
+                  f
+                : Int
+              : Int
+              #19
+              _object
+                g
+              : Int
+            : Int
+          : Int
+          #19
+          _mul
+            #19
+            _mul
+              #19
+              _object
+                c
+              : Int
+              #19
+              _object
+                d
+              : Int
+            : Int
+            #19
+            _object
+              h
+            : Int
+          : Int
+        : Int
+        #19
+        _plus
+          #19
+          _plus
+            #19
+            _mul
+              #19
+              _mul
+                #19
+                _object
+                  g
+                : Int
+                #19
+                _object
+                  e
+                : Int
+              : Int
+              #19
+              _object
+                c
+              : Int
+            : Int
+            #19
+            _mul
+              #19
+              _mul
+                #19
+                _object
+                  h
+                : Int
+                #19
+                _object
+                  f
+                : Int
+              : Int
+              #19
+              _object
+                a
+              : Int
+            : Int
+          : Int
+          #19
+          _mul
+            #19
+            _mul
+              #19
+              _object
+                i
+              : Int
+              #19
+              _object
+                d
+              : Int
+            : Int
+            #19
+            _object
+              b
+            : Int
+          : Int
+        : Int
+      : Int
+    )
+  #23
+  _class
+    Main
+    Object
+    "_tests/advanced/expressions.cl"
+    (
+    #24
+    _attr
+      n
+      Int
+      #24
+      _int
+        5
+      : Int
+    #25
+    _attr
+      prec
+      Int
+      #25
+      _int
+        10
+      : Int
+    #27
+    _method
+      factorial
+      #27
+      _formal
+        n
+        Int
+      Int
+      #28
+      _cond
+        #28
+        _lt
+          #28
+          _object
+            n
+          : Int
+          #28
+          _int
+            1
+          : Int
+        : Bool
+        #29
+        _int
+          1
+        : Int
+        #31
+        _dispatch
+          #31
+          _object
+            self
+          : SELF_TYPE
+          factorial
+          (
+          #31
+          _sub
+            #31
+            _object
+              n
+            : Int
+            #31
+            _int
+              1
+            : Int
+          : Int
+          )
+        : Int
+      : Int
+    #35
+    _method
+      taylor
+      #35
+      _formal
+        n
+        Int
+      #35
+      _formal
+        m
+        Int
+      Int
+      #36
+      _let
+        i
+        Int
+        #36
+        _int
+          0
+        : Int
+        #36
+        _let
+          sum
+          Int
+          #36
+          _int
+            0
+          : Int
+          #36
+          _let
+            pow
+            Int
+            #36
+            _int
+              1
+            : Int
+            #36
+            _block
+              #37
+              _loop
+                #37
+                _lt
+                  #37
+                  _object
+                    i
+                  : Int
+                  #37
+                  _object
+                    m
+                  : Int
+                : Bool
+                #38
+                _block
+                  #39
+                  _assign
+                    sum
+                    #39
+                    _plus
+                      #39
+                      _object
+                        sum
+                      : Int
+                      #39
+                      _divide
+                        #39
+                        _object
+                          pow
+                        : Int
+                        #39
+                        _dispatch
+                          #39
+                          _object
+                            self
+                          : SELF_TYPE
+                          factorial
+                          (
+                          #39
+                          _object
+                            i
+                          : Int
+                          )
+                        : Int
+                      : Int
+                    : Int
+                  : Int
+                  #40
+                  _assign
+                    pow
+                    #40
+                    _mul
+                      #40
+                      _object
+                        pow
+                      : Int
+                      #40
+                      _object
+                        n
+                      : Int
+                    : Int
+                  : Int
+                  #41
+                  _assign
+                    i
+                    #41
+                    _plus
+                      #41
+                      _object
+                        i
+                      : Int
+                      #41
+                      _int
+                        1
+                      : Int
+                    : Int
+                  : Int
+                : Int
+              : Object
+              #44
+              _object
+                sum
+              : Int
+            : Int
+          : Int
+        : Int
+      : Int
+    #48
+    _method
+      main
+      Int
+      #49
+      _let
+        val
+        Int
+        #0
+        _no_expr
+        : _no_type
+        #49
+        _let
+          m
+          Matrix
+          #49
+          _new
+            Matrix
+          : Matrix
+          #49
+          _block
+            #50
+            _assign
+              val
+              #50
+              _dispatch
+                #50
+                _object
+                  self
+                : SELF_TYPE
+                taylor
+                (
+                #50
+                _object
+                  n
+                : Int
+                #50
+                _object
+                  prec
+                : Int
+                )
+              : Int
+            : Int
+            #51
+            _dispatch
+              #51
+              _object
+                m
+              : Matrix
+              init
+              (
+              #51
+              _object
+                n
+              : Int
+              #51
+              _int
+                0
+              : Int
+              #51
+              _object
+                n
+              : Int
+              #51
+              _int
+                0
+              : Int
+              #51
+              _object
+                n
+              : Int
+              #51
+              _int
+                0
+              : Int
+              #51
+              _object
+                n
+              : Int
+              #51
+              _int
+                0
+              : Int
+              #51
+              _object
+                n
+              : Int
+              )
+            : Matrix
+            #52
+            _dispatch
+              #52
+              _object
+                m
+              : Matrix
+              det
+              (
+              )
+            : Int
+          : Int
+        : Int
+      : Int
+    )
